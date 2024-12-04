@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSCC Redesign</title>
+    <!-- custom css -->
+    <link href="style.css" rel="stylesheet">
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="images/Nova_Scotia_Community_College,_Institute_of_Technology_Campus_Logo.jpeg" type="image/x-icon">
+
+</head>
+<body>
+    <div class="mx-auto 2xl:container">
+        <!-- nav bar -->
+        <nav class="px-6 grid grid-cols-12 items-center nav-bar">
+            
+            <!-- Logo Section -->
+            <div class="col-span-2">
+                <img src="images/nscc-logo-name.png" class="min-h-16 object-contain">
+            </div>
+            <!-- Navigation Tabs -->
+            <ul id="menu" class="hidden lg:col-span-8 lg:flex px-8 lg:space-x-12 text-white text-lg">
+                <li class="hover:text-slate-300 cursor-pointer">Current Students</li>
+                <li class="hover:text-slate-300 cursor-pointer">Faculty & Staff</li>
+                <li class="hover:text-slate-300 cursor-pointer">Community</li>
+                <li class="hover:text-slate-300 cursor-pointer">Alumni</li>
+                <li class="hover:text-slate-300 cursor-pointer">Future Students</li>
+            </ul>
+            <!-- Search Bar -->
+            <div class="hidden lg:flex col-span-2 flex lg:justify-end">
+                <div class="relative w-full">
+                <img src="images/search.png" alt="Search Icon" class="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5">
+                <input type="text" class="pl-10 pr-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 w-full">
+                </div>
+            </div>
+            <!-- Hamburger Icon visible on mobile only (got from w3 schools)-->
+            <div class="col-start-12 lg:hidden flex justify-end">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                <!-- Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu (only visible on small screens) -->
+            <div id="mobile-menu" class="lg:hidden hidden col-span-12">
+                <ul class="space-y-4 text-white text-center py-4">
+                    <li class="hover:text-slate-300 cursor-pointer">Current Students</li>
+                    <li class="hover:text-slate-300 cursor-pointer">Faculty & Staff</li>
+                    <li class="hover:text-slate-300 cursor-pointer">Community</li>
+                    <li class="hover:text-slate-300 cursor-pointer">Alumni</li>
+                    <li class="hover:text-slate-300 cursor-pointer">Future Students</li>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            // JavaScript to toggle the mobile menu (got from W3 schools)
+            document.getElementById('menu-btn').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+            });
+        </script>
+
+    <!-- call to action -->
+        <div class="cta bg-[url('/images/student-square.png')] grid grid-cols-12 bg-cover lg:bg-center sm:bg-left xs-bg-left bg-no-repeat text-white max-h-screen">
+            <div class="lg:col-start-2 lg:col-span-4 p-6 lg:p-12 flex items-center">
+                <!-- Text Section -->
+                <div class=" col-span-4">
+                    <hr class="border-4 border-white">
+                    <br>
+                    <h1 class="text-8xl font-bold">UNLOCK YOUR POTENTIAL.</h1>
+                    <br>
+                    <hr class="border-4 border-white">
+                    <button class="hover:bg-white/50 my-20 px-8 py-4 border-solid border-2 border-white bg-white/20 text-white text-3xl flex items-center">
+                        APPLY NOW <span><img class="max-h-6 ml-20"src="./images/arrow.png"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    <!-- news/events -->
+        <div class="news-events grid lg:grid-cols-12">
+            <div class="news lg:col-span-6 flex flex-col h-full">
+                <h1 class="news-h1 text-4xl text-white border-4 p-2 w-1/3 text-center ml-10 my-5">In the News ...</h1>
+                <!-- mocked image carousel -->
+                <div class="grid grid-cols-12 items-center gap-4 mt-6 ml-10">
+                    <img class="col-span-6" src="images/olivia-sewell.avif">
+                    <div class="col-span-6 text-white border-l-2 border-white xl:text-4xl ml-10 px-10">
+                        <h3>Tantallon woman to compete against world's top young chefs at culinary 'Olympics</h3>
+                    </div>
+                    <div class="arrows flex space-x-36 mt-4 col-span-6 justify-center">
+                        <img src="images/arrow.png" class="transform -scale-x-100 w-6 h-6">
+                        <img src="images/arrow.png" class="w-6 h-6">
+                    </div>
+                </div>
+                <div class="grid grid-cols-12 justify-center mt-2">
+                    <div class="dots col-span-7 flex justify-center">
+                        <img src="images/more.png" class="w-8 h-8">
+                    </div>
+                </div>
+                <!-- read more section -->
+                <div class="read-more text-white mt-auto mb-20 mx-10 text-md">
+                    <p>Read more ...</p>
+                    <ul class="list-disc pl-5">
+                        <li>'Big and Beautiful' new Sydney Campus welcomes by students as school year begins.</li>
+                        <li>Nova Scotia expands practical nurse training program for care assistants.</li>
+                        <li>Map of NS coastline aims to enhance public safety.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- events -->
+            <div class="events lg:col-span-6">
+                <h1 class="events-h1 text-4xl border-4 p-2 w-1/5 text-center ml-10 mt-5">Events</h1>
+                <!-- event 1 -->
+                <div class="event-1 my-6 mx-10 rounded-lg grid grid-cols-12 items-center py-4">
+                    <div class="date col-span-1 border-r-2 border-black pr-20 text-center text-xl font-semibold ml-10">
+                        <p>Oct <br>15</p>
+                    </div>
+                    <div class="event-text col-span-8 col-start-4 pl-4 ">
+                        <h3 class="font-bold text-xl">Women Unlimited (IT Campus)</h3>
+                        <p>Join us to learn about Women Unlimited, for diverse women to explore careers in trades and technology.</p>
+                        <p>Time: 10 - 11 am</p>
+                    </div>
+                </div>
+                <!-- event 2 -->
+                <div class="event-2 my-6 mx-10 rounded-lg grid grid-cols-12 items-center py-4">
+                    <div class="date col-span-1 border-r-2 border-black pr-20 text-center text-xl font-semibold ml-10 ">
+                        <p> Oct<br> 15</p>
+                    </div>
+                    <div class="event-text col-span-8 col-start-4 pl-4">
+                        <h3 class="font-bold text-xl">Research 101: How to find information</h3>
+                        <p>Library and Learnign Commons Webinar</p>
+                        <p>Time: 11am - 12pm</p>
+                    </div>
+                </div>
+                <!-- event 3 -->
+                <div class="event-3 my-6 mx-10 rounded-lg grid grid-cols-12 items-center py-4">
+                    <div class="date col-span-1 border-r-2 border-black pr-20 text-center text-xl font-semibold ml-10">
+                        <p>Oct <br>16</p>
+                    </div>
+                    <div class="event-text col-span-8 col-start-4 pl-4">
+                        <h3 class="font-bold text-xl">Women Unlimited (Akerly Campus)</h3>
+                        <p>Join us to learn about Women Unlimited, for diverse women to explore careers in trades and technology.</p>
+                        <p>Time: 7 - 8pm</p>
+                    </div>
+                </div>
+                <!-- event 4 -->
+                <div class="event-4 my-6 mx-10 mb-20 rounded-lg grid grid-cols-12 items-center py-4">
+                    <div class="date col-span-1 border-r-2 border-black pr-20 text-center text-xl font-semibold ml-10">
+                        <p>Oct<br> 17</p>
+                    </div>
+                    <div class="event-text col-span-8 col-start-4 pl-4">
+                    <h3 class="font-bold text-xl">NSCC Open house</h3> 
+                    <p>Visit IT Campus during our October 17 open house.</p>
+                    <p>Time: 9am - 7pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- land acknowledgement -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center justify-center px-5 bg-black text-white py-4 section-land-ack">
+            <!-- Heading -->
+            <div class="md:col-span-3 p-3 mx-auto">
+                <h2 class="text-4xl font-semibold land-heading">Land Acknowledgement</h2>
+            </div>
+            <!-- Image -->
+            <div class="md:col-span-2 flex justify-center">
+                <img src="images/miqmaq.jpg" alt="Mi'kmaq Image" class="rounded-full w-30 h-30 md:w-32 md:h-32 object-cover">
+            </div>
+            <!-- Text -->
+            <div class="md:col-span-7 text-center md:text-left p-3 mx-auto">
+                <p>
+                    NSCC is located in Mi'kma'ki, the unceded territory and traditional homeland of the Mi'kmaq Nation. Our relationship is based on a series of peace and friendship treaties between the Mi'kmaq Nation and the Crown, dating back to 1725. As Treaty beneficiaries, we recognize that we are all Treaty People.
+                </p>
+            </div>
+        </div>
+
+    <!-- footer -->
+    <div class="footer relative grid lg:grid-cols-3 gap-4 bg-gradient-to-b from-black/30 via-transparent to-white">
+        <!-- contact section -->
+        <div class="contact lg:col-span-1 p-8">
+            <div class="flex items-center mb-10">
+                <hr class="w-40 border-1 border-black ml-10 mr-10">
+                <h3 class="text-xl mb-2">Contact:</h3>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="address text-sm">
+                    <p>Address:</p>
+                    <p>5685 Leeds Street</p>
+                    <p>Halifax, Nova Scotia</p>
+                    <p>B3K 2T3</p>
+                </div>
+                <div class="phone text-sm">
+                    <p>Phone: 902-491-4900</p>
+                    <p>Fax: 902-491-4903</p>
+                    <p>Email: admissions@nscc.ca</p>
+                    <p>Student Services: <br>902-491-4908</p>
+                </div>
+            </div>
+        </div>
+        <!-- sitemap section -->
+        <div class="site-map border-l-2 border-black lg:col-span-1 p-8 flex flex-col items-center gap-4">
+            <img class="w-40 mb-4" src="images/Nova_Scotia_Community_College,_Institute_of_Technology_Campus_Logo.jpeg" alt="NSCC Logo">
+            <ul class="flex space-x-12 text-lg text-center">
+                <li class="border-r border-black pr-12">Privacy</li>
+                <li class="border-r border-black pr-12">Sitemap</li>
+                <li>Disclaimer</li>
+            </ul>
+            <p class="mt-10 text-xs">&copy 2024 NSCC - Nova Scotia Community College</p>
+        </div>
+        <!-- campuses section -->
+        <div class="campuses lg:col-span-1 p-8 border-l-2 border-black">
+            <div class="flex items-center mb-10">
+                <h3 class="text-xl mb-2">Campuses:</h3>
+                <hr class="w-40 border-1 border-black ml-20">
+            </div>
+            <div>
+                <ul class="list-inside columns-2 gap-4 text-sm">
+                    <li>Akerly</li>
+                    <li>Annapolis Valley</li>
+                    <li>Amherst</li>
+                    <li>Burridge</li>
+                    <li>COGS</li>
+                    <li>Cumberland</li>
+                    <li>Digby</li>
+                    <li>eCampus</li>
+                    <li>Institute of Technology</li>
+                    <li>Ivany</li>
+                    <li>Kingstec</li>
+                    <li>Lunenburg</li>
+                    <li>Pictou</li>
+                    <li>Shelburne</li>
+                    <li>Strait Area</li>
+                    <li>Sydney</li>
+                    <li>Truro</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

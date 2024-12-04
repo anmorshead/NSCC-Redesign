@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&family=Heebo:wght@100..900&display=swap');
+
+.nav-bar{
+    background-color: #004477;
+    font-family: "Roboto Condensed", serif;
+}
+
+.cta{
+    font-family: 'Heebo', serif;
+}
+
+button{
+    font-family: "Roboto Condensed", serif;
+}
+
+.news-events{
+    font-family: "Roboto Condensed", serif;
+}
+
+.news{
+    background-color: #004477;
+}
+
+.news-h1{
+    border-color: #5EA9E8;
+}
+
+.events-h1{
+    border-color: #5EA9E8;
+    color:#004477;
+}
+
+.event-1{
+    background-color:rgba(94, 169, 232, 0.3);
+}
+
+.event-2{
+    background-color: rgba(94, 169, 232, 0.4);
+}
+
+.event-3{
+    background-color: rgba(94, 169, 232, 0.5);
+}
+
+.event-4{
+    background-color: rgba(94, 169, 232, 0.6);
+}
+
+.section-land-ack{
+    font-family: "Roboto Condensed", serif;
+}
+
+.land-heading{
+    color:#407B5A;
+}
+
+footer{
+    font-family: "Roboto Condensed", serif;
+}
+
